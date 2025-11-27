@@ -18,19 +18,19 @@
         "php"
     ],
     "type": "library",
-    "version": "1.0.1",
+    "version": "1.0.0",
     "homepage": "https://github.com/dv0vd/laravel-redis-stale-refs-cleaner",
     "readme": "README.md",
     "license": "MIT",
 
     "require": {
-        "php": ">=7.4"
+        "php": ">=7.4",
+        "illuminate/support": ">=6.0",
+        "illuminate/cache": ">=6.0",
+        "illuminate/console": ">=6.0"
     },
 
     "suggest": {
-        "illuminate/support": "Required when using this package inside Laravel",
-        "illuminate/cache": "Required to access the cache store",
-        "illuminate/console": "Required to run the Artisan command",
         "ext-redis": "Required for phpredis client",
         "predis/predis": "Required for predis client"
     },
