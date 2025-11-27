@@ -1,0 +1,62 @@
+{
+    "name": "dv0vd/laravel-redis-stale-refs-cleaner",
+    "description": "Laravel console command to purge stale Redis cache references",
+    "keywords": [
+        "laravel",
+        "redis",
+        "cache",
+        "console",
+        "artisan",
+        "command",
+        "purge",
+        "stale",
+        "references",
+        "refs",
+        "cleanup",
+        "cache-clean",
+        "laravel-package",
+        "php"
+    ],
+    "type": "library",
+    "version": "1.0.0",
+    "homepage": "https://github.com/dv0vd/laravel-redis-stale-refs-cleaner",
+    "readme": "README.md",
+    "license": "MIT",
+
+    "require": {
+        "php": ">=7.4",
+        "illuminate/support": ">=6.0",
+        "illuminate/cache": ">=6.0",
+        "illuminate/console": ">=6.0"
+    },
+
+    "suggest": {
+        "ext-redis": "Required for phpredis client",
+        "predis/predis": "Required for predis client"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Dv0vD\\LaravelRedisStaleRefsCleaner\\": "src/"
+        }
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dv0vD\\LaravelRedisStaleRefsCleaner\\StaleRefsCleanerServiceProvider"
+            ]
+        }
+    },
+
+    "authors": [
+        {
+            "name": "Viacheslav Davydov",
+            "email": "dv0vd@dv0vd.xyz",
+            "homepage": "https://dv0vd.dev"
+        }
+    ],
+
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
