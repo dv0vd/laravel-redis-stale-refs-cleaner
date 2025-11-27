@@ -29,6 +29,18 @@ This command automates the cleanup, safely removing references to keys that no l
 ```bash
 composer require dv0vd/laravel-redis-stale-refs-cleaner
 ```
+> **⚠️ Important Note About Dependencies**  
+> This package places its Laravel and Redis-related dependencies in the `suggest` section instead of `require`.  
+> This is intentional — it prevents Composer from blocking installation in older Laravel projects affected by known security advisories.  
+>  
+> Because of this, **Composer will not automatically validate that your environment meets the required Laravel or Redis versions.**  
+> Make sure your project already includes compatible versions of:  
+> - `illuminate/support`  
+> - `illuminate/cache`  
+> - `illuminate/console`  
+> - `ext-redis` or `predis/predis`  
+>  
+> If you're on Laravel 6+, your setup is generally compatible — just double-check when installing into legacy or customized environments.
 
 ## Usage
 1. Run the command:
